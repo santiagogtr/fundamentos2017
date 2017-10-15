@@ -82,6 +82,10 @@ void MainGame::draw() {
 
 void MainGame::updateElements() {
 	_player->update();
+	for (size_t i = 0; i < _zombies.size(); i++)
+	{
+		_zombies[i]->update();
+	}
 }
 
 void MainGame::handleInput() {
@@ -163,3 +167,4 @@ MainGame::MainGame() :
 MainGame::~MainGame()
 {
 }
+
